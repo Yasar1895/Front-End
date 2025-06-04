@@ -1,0 +1,142 @@
+/* Background with subtle moving circles animation */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Animated circles */
+
+.background::before,
+.background::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: float 15s infinite ease-in-out;
+}
+
+.background::before {
+  width: 250px;
+  height: 250px;
+  background: #1db954; /* Spotify green for contrast */
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.background::after {
+  width: 200px;
+  height: 200px;
+  background: #ff4c60; /* Coral red */
+  bottom: 15%;
+  right: 20%;
+  animation-delay: 7.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-40px) translateX(20px);
+    opacity: 0.25;
+  }
+}
+
+/* Container styling */
+
+.container {
+  background-color: #282c34; /* Dark charcoal for strong contrast */
+  padding: 3rem 3.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  width: 360px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+/* Form styling */
+
+.form h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: #1db954;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  outline-offset: 2px;
+  outline-color: #1db954;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="email"]:focus {
+  box-shadow: 0 0 8px 2px #1db954;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #1db954;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #17a346;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Message styles */
+
+.message {
+  margin-top: 1rem;
+  font-weight: 600;
+  min-height: 1.2rem;
+  font-size: 1rem;
+}
+
+.success {
+  color: #4caf50;
+}
+
+.error {
+  color: #ff4c60;
+}

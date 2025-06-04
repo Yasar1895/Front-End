@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e3f2fd; /* light blue background */
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #0d47a1; /* deep blue */
+  text-shadow: 1px 1px 2px #bbdefb;
+}
+
+#noteForm {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#noteInput {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #64b5f6;
+  border-radius: 6px;
+  outline-color: #1976d2;
+  transition: border-color 0.3s ease;
+}
+
+#noteInput:focus {
+  border-color: #0d47a1;
+}
+
+#addBtn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.4);
+  transition: background 0.3s ease;
+}
+
+#addBtn:hover {
+  background: #0d47a1;
+  box-shadow: 0 6px 12px rgba(13, 71, 161, 0.6);
+}
+
+#notesList {
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.note {
+  background: #bbdefb; /* light blue note */
+  margin-bottom: 12px;
+  padding: 18px 22px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(25, 118, 210, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0d47a1;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.noteText {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.deleteBtn {
+  background: #ef5350; /* bright red */
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 3px 6px rgba(239, 83, 80, 0.5);
+  transition: background 0.3s ease;
+}
+
+.deleteBtn:hover {
+  background: #b71c1c; /* darker red */
+  box-shadow: 0 4px 8px rgba(183, 28, 28, 0.7);
+}

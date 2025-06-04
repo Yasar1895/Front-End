@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="valid.css">
+</head>
+<body>
+  <div class="form-container">
+    <form id="myForm">
+      <h2>Register</h2>
+      
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+      <span class="error" id="usernameError"></span>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <span class="error" id="emailError"></span>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <span class="error" id="passwordError"></span>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="valid.js"></script>
+</body>
+</html>

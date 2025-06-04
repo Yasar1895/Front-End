@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Calendar</title>
+  <link rel="stylesheet" href="calender.css" />
+</head>
+<body>
+  <div class="mini-calendar" onclick="toggleBigCalendar()">
+    <span id="mini-date"></span>
+  </div>
+
+  <div id="big-calendar" class="big-calendar hidden">
+    <div class="calendar-header">
+      <button onclick="changeMonth(-1)">❮</button>
+      <h2 id="month-year"></h2>
+      <button onclick="changeMonth(1)">❯</button>
+    </div>
+    <div class="calendar-grid" id="calendar-grid"></div>
+  </div>
+
+  <script src="calender.js"></script>
+</body>
+</html>

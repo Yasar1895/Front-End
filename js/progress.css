@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  font-family: 'Arial', sans-serif;
+}
+
+.progress-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.circle-background {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: conic-gradient(
+    #00ffe0, #00f2ff, #00b7ff, #0096ff,
+    #004eff, #5e00ff, #c800ff, #ff0080,
+    #ff0040, #ff1f00, #ff6a00, #ffc400,
+    #fff200, #cfff00, #91ff00, #00ffe0
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: rotate 8s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: #333;
+  stroke-width: 15;
+}
+
+.progress-ring-circle {
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-dasharray: 565.48; /* 2πr for r=90 */
+  stroke-dashoffset: 565.48;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}

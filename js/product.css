@@ -1,0 +1,117 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  min-height: 100vh;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated background */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(60deg, #ff6ec4, #7873f5, #2af598, #009efd);
+  background-size: 800% 800%;
+  animation: gradientMotion 20s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientMotion {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Product Container */
+.product-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  background: #ffffff10;
+  backdrop-filter: blur(20px);
+  border: 3px solid #ffffff40;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Product Image */
+.product-image img {
+  width: 100%;
+  max-width: 550px;
+  object-fit: cover;
+}
+
+/* Details */
+.product-details {
+  padding: 3rem;
+  color: #fff;
+  flex: 1;
+}
+
+.product-title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #ffef7b;
+}
+
+.product-description {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.product-price {
+  font-size: 2rem;
+  color: #000c09;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+button {
+  background: #ff0077;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Cart Message Animation */
+.cart-message {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  color: #00110a;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(20px);
+}
+
+.cart-message.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}

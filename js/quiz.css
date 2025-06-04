@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #ff6a00, #ee0979, #ff6a00, #ee0979);
+  background-size: 800% 800%;
+  animation: colorWaves 12s ease infinite;
+  color: white;
+}
+
+@keyframes colorWaves {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseBG {
+  0%, 100% {
+    background-position: center;
+    background-size: 200% 200%;
+    filter: brightness(1);
+  }
+  50% {
+    background-size: 220% 220%;
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Updated h1 styling */
+h1 {
+  position: fixed;
+  top: 10px;              /* a little space from top */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff6a00;         /* vibrant orange */
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: 'Arial Black', Arial, sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+  z-index: 1000;          /* ensure it stays on top */
+  background: rgba(0,0,0,0.3);  /* subtle transparent background for readability */
+  padding: 5px 20px;
+  border-radius: 10px;
+  user-select: none;      /* prevent text selection */
+}
+
+
+.quiz-container {
+  background-color: rgba(0, 0, 0, 0.7); /* dark translucent black for strong contrast */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  height: 500px;
+  width: 600px;
+  font-size: xx-large;
+  color: #fff; /* white text for readability */
+  backdrop-filter: blur(8px); /* optional: adds a nice frosted glass effect */
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2980b9;
+}

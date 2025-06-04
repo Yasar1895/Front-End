@@ -1,0 +1,96 @@
+/* Animated gradient background */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 800% 800%;
+    animation: gradientBG 20s ease infinite;
+}
+
+/* Container with fixed solid color */
+.container {
+    background-color: #2c3e50; /* Constant dark blue color */
+    padding: 50px 60px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 400px;
+    color: #f1f1f1;
+}
+
+/* Bigger headings and text */
+h1 {
+    font-size: 3.6rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+label {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+input[type="date"] {
+    padding: 16px 18px;
+    font-size: 2rem;       /* bigger font size */
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    color: #222;           /* dark text for visibility */
+    background-color: #fff; /* white background for contrast */
+    height: 50px;          /* taller input box */
+}
+
+/* Optional: style placeholder text (some browsers) */
+input[type="date"]::placeholder {
+    font-size: 2rem;
+}
+
+/* Increase arrow/calendar icon size (works in WebKit browsers) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+button {
+    background-color: #e67e22;
+    color: white;
+    font-size: 1.6rem;
+    padding: 16px 0;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+#result {
+    margin-top: 35px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}

@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  color: white;
+}
+
+canvas#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  margin: auto;
+  margin-top: 10vh;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff6ec4, #7873f5, #4ade80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  color: #eee;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  font-size: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 15px;
+  min-width: 100px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.countdown span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+small {
+  font-size: 1rem;
+  opacity: 0.8;
+}

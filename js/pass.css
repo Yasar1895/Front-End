@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #1e1e2f, #2c3e50, #4b6cb7, #182848);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  text-align: center;
+  background: #2c2c3e;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #000;
+  width: 600px;
+  height: 300px;
+  max-width: 95%;
+}
+
+
+
+.password-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+input {
+  font-size: 1.2em;
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.password-box button {
+  font-size: 1.5em;
+  padding: 10px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.container > button {
+  padding: 10px 20px;
+  font-size: 2em;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

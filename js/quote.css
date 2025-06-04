@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 1s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: #ffffffcc; /* translucent white */
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+  transition: opacity 0.6s ease;
+  min-height: 120px;
+}
+
+.quote-author {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 40px;
+  transition: opacity 0.6s ease;
+}
+
+button#new-quote {
+  font-size: 1.3rem;
+  padding: 16px 40px;
+  border-radius: 50px;
+  background-color: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+button#new-quote:hover {
+  background-color: #ee5253;
+}
+
+/* Animations */
+.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
