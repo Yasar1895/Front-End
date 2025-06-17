@@ -1,0 +1,19 @@
+import React, { useState } from "react";
+
+function DateInputApp() {
+  const [selectedDate, setSelectedDate] = useState("");
+
+  const handleChange = (e) => {
+    setSelectedDate(e.target.value);
+  };
+
+  return (
+    <div>
+      <h2>Select a Date</h2>
+      <input type="date" value={selectedDate} onChange={handleChange} />
+      <p>You selected: {selectedDate}</p>
+    </div>
+  );
+}
+
+export default DateInputApp;
