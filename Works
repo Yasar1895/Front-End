@@ -1,0 +1,63 @@
+# 1. Prime Number Check
+n = int(input("Number: "))
+if n < 2:
+    print("Not prime")
+else:
+    for i in range(2, n):
+        if n % i == 0:
+            print("Not prime")
+            break
+    else:
+        print("Prime")
+
+# 2. Prime Numbers in Range
+a = int(input("Start: "))
+b = int(input("End: "))
+c = 0
+for n in range(a, b+1):
+    for i in range(2, n):
+        if n % i == 0:
+            break
+    else:
+        if n > 1:
+            print(n)
+            c = c + 1
+print("Total:", c)
+
+# 3. Factorial
+n = int(input("Number: "))
+f = 1
+for i in range(1, n+1):
+    f = f * i
+print("Factorial:", f)
+
+# 4. Fibonacci Series
+n = int(input("Terms: "))
+a = 0
+b = 1
+for i in range(n):
+    print(a)
+    a = a + b
+    b = a - b
+
+# 5. Palindrome Check
+n = input("Number: ")
+if n == n[::-1]:
+    print("Palindrome")
+else:
+    print("Not palindrome")
+
+# 6. Armstrong Number
+n = int(input("Number: "))
+s = 0
+t = str(n)
+for d in t:
+    s = s + int(d) ** len(t)
+if s == n:
+    print("Armstrong")
+else:
+    print("Not Armstrong")
+
+# 7. Reverse Number
+n = input("Number: ")
+print("Reversed:", n[::-1])
